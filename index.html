@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographie-Kompass</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Startbildschirm -->
+    <!-- ========================= -->
+
+    <section id="startScreen">
+
+        <h1>Was ist Geographie?</h1>
+
+        <p>
+            Ordne die Begriffe den passenden Bereichen des Kompasses zu.
+            Erst wenn alle Elemente ihren Platz gefunden haben,
+            entsteht das Gesamtbild der Geographie.
+        </p>
+
+        <button id="startButton">
+            Spiel starten
+        </button>
+
+    </section>
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- Spiel -->
+    <!-- ========================= -->
+
+    <section id="gameSection" class="hidden">
+
+        <header>
+
+            <h1>Geographie-Kompass</h1>
+
+            <p>
+                Ziehe jeden Begriff auf den passenden Bereich.
+            </p>
+
+        </header>
+
+
+
+
+
+        <main>
+
+            <!-- ========================= -->
+            <!-- Karten -->
+            <!-- ========================= -->
+
+            <aside id="cardsContainer">
+
+                <div class="card" draggable="true" data-category="physical">
+                    Klima
+                </div>
+
+                <div class="card" draggable="true" data-category="physical">
+                    Wasser
+                </div>
+
+                <div class="card" draggable="true" data-category="physical">
+                    Relief
+                </div>
+
+                <div class="card" draggable="true" data-category="human">
+                    Mensch
+                </div>
+
+                <div class="card" draggable="true" data-category="human">
+                    Stadt
+                </div>
+
+                <div class="card" draggable="true" data-category="human">
+                    Wirtschaft
+                </div>
+
+                <div class="card" draggable="true" data-category="gis">
+                    GIS
+                </div>
+
+                <div class="card" draggable="true" data-category="gis">
+                    Kartographie
+                </div>
+
+                <div class="card" draggable="true" data-category="gis">
+                    Fernerkundung
+                </div>
+
+                <div class="card" draggable="true" data-category="methods">
+                    Statistik
+                </div>
+
+                <div class="card" draggable="true" data-category="methods">
+                    Analyse
+                </div>
+
+                <div class="card" draggable="true" data-category="methods">
+                    Messung
+                </div>
+
+            </aside>
+
+
+
+
+
+            <!-- ========================= -->
+            <!-- Kompass -->
+            <!-- ========================= -->
+
+            <section id="compass">
+
+                <!-- Norden -->
+
+                <div class="dropZone north"
+                    data-category="physical">
+
+                    <h2>
+                        Physische Geographie
+                    </h2>
+
+                </div>
+
+                <!-- Osten -->
+
+                <div class="dropZone east"
+                    data-category="human">
+
+                    <h2>
+                        Humangeographie
+                    </h2>
+
+                </div>
+
+                <!-- Süden -->
+
+                <div class="dropZone south"
+                    data-category="gis">
+
+                    <h2>
+                        Geoinformatik
+                    </h2>
+
+                </div>
+
+                <!-- Westen -->
+
+                <div class="dropZone west"
+                    data-category="methods">
+
+                    <h2>
+                        Wissenschaftliche Methoden
+                    </h2>
+
+                </div>
+
+
+
+
+
+                <!-- Mittelpunkt -->
+
+                <div id="center">
+
+                    <h2>
+                        Wissenschaftliches Arbeiten
+                    </h2>
+
+                    <p>
+                        Beobachten • Messen • Analysieren • Verstehen
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+
+
+        <!-- ========================= -->
+        <!-- Fortschritt -->
+        <!-- ========================= -->
+
+        <footer>
+
+            <div id="progressContainer">
+
+                <span>Fortschritt:</span>
+
+                <progress
+                    id="progressBar"
+                    value="0"
+                    max="12">
+                </progress>
+
+                <span id="progressText">
+                    0 / 12
+                </span>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- Ende -->
+    <!-- ========================= -->
+
+    <section id="finishScreen" class="hidden">
+
+        <h1>Geschafft!</h1>
+
+        <p>
+
+            Geographie verbindet Mensch,
+            Natur,
+            Geoinformatik und wissenschaftliche
+            Methoden zu einem Gesamtbild unserer Welt.
+
+        </p>
+
+        <button id="restartButton">
+
+            Nochmal spielen
+
+        </button>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
