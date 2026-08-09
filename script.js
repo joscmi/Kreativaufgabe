@@ -1,7 +1,3 @@
-// ===============================
-// Elemente holen
-// ===============================
-
 const startScreen = document.getElementById("startScreen");
 const gameSection = document.getElementById("gameSection");
 const finishScreen = document.getElementById("finishScreen");
@@ -20,11 +16,6 @@ let solvedCards = 0;
 
 const totalCards = cards.length;
 
-
-// ===============================
-// Start Button
-// ===============================
-
 startButton.addEventListener("click", () => {
 
     startScreen.classList.add("hidden");
@@ -33,11 +24,6 @@ startButton.addEventListener("click", () => {
 
 });
 
-
-// ===============================
-// Karten
-// ===============================
-
 cards.forEach(card => {
 
     card.addEventListener("dragstart", dragStart);
@@ -45,11 +31,6 @@ cards.forEach(card => {
     card.addEventListener("dragend", dragEnd);
 
 });
-
-
-// ===============================
-// Dropzonen
-// ===============================
 
 dropZones.forEach(zone => {
 
@@ -62,11 +43,6 @@ dropZones.forEach(zone => {
     zone.addEventListener("drop", dropCard);
 
 });
-
-
-// ===============================
-// Drag Funktionen
-// ===============================
 
 function dragStart(e){
 
@@ -105,11 +81,6 @@ function dragLeave(){
     this.classList.remove("hover");
 
 }
-
-
-// ===============================
-// Ablegen
-// ===============================
 
 function dropCard(e){
 
@@ -158,11 +129,6 @@ function dropCard(e){
 
 }
 
-
-// ===============================
-// Fortschritt
-// ===============================
-
 function updateProgress(){
 
     progressBar.value = solvedCards;
@@ -177,11 +143,6 @@ function updateProgress(){
 
 }
 
-
-// ===============================
-// Ende
-// ===============================
-
 function showFinishScreen(){
 
     gameSection.classList.add("hidden");
@@ -189,11 +150,6 @@ function showFinishScreen(){
     finishScreen.classList.remove("hidden");
 
 }
-
-
-// ===============================
-// Neustart
-// ===============================
 
 restartButton.addEventListener("click", resetGame);
 
